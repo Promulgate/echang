@@ -1,0 +1,246 @@
+@font-face {
+	font-family: FontAwesome;
+	src: url('font-awesome/fonts/fontawesome-webfont.woff');
+}
+body{
+	font-family: 'Comfortaa', cursive;
+	color: #888;
+	background-image: url("images/DSC_0187.jpg");
+	background-size: cover; 
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow: hidden;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;     
+}
+/* header */
+/* header */
+.logo {
+	margin-top: 2%;
+	text-align: center;
+	font-size: 4em;
+	text-shadow: 1px 1px 1px #fff;
+	color: #fff;
+	cursor: default;
+}
+/* Hero */
+/* Hero */
+.about-btn {
+	position: fixed;
+	top: 60%;
+	right: 15%;
+	color: #fff;
+	font-size: 3em;
+}
+.about-btn:hover {
+	text-shadow: 0 0 10px #00c6ff;
+	cursor: pointer;
+}
+.works-btn {
+	position: fixed;
+	top: 70%;
+	right: 15%;
+	color: #fff;
+	font-size: 3em;
+}
+.works-btn:hover {
+	text-shadow: 0 0 10px #00c6ff;
+	cursor: pointer;
+}
+/* About */
+/* About */
+.about {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .75);
+	text-align: center;
+	z-index: 100;
+	display: none;
+}
+/* Works */
+/* Works */
+.works {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .75);
+	text-align: center;
+	z-index: 100;
+	display: none;
+}
+.show {
+	display: block;
+}
+.close {
+	color: #fff;
+	float: right;
+	margin-top: 5%;
+	margin-right: 5%;
+	font-size: 2.5em;
+	font-weight: bold;
+	text-shadow: 0 0 5px #00c6ff;
+	cursor: pointer;
+}
+/* Content */
+/* Content */
+.grid {
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+.portfolio {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	border: 2px solid #ccc;
+	margin: 10px 1%;
+	max-width: 432px;
+	max-height: 243px;
+	width: 48%;
+	height: auto;
+	background: #1d6fa5;
+	text-align: center;
+	cursor: pointer;
+}
+.portfolio-img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+.caption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+	text-align: left;
+	font-weight: 800;
+}
+.portfolio-img {
+	opacity: 0.95;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale3d(1.05,1.05,1);
+	transform: scale3d(1.05,1.05,1);
+}
+.caption:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0.5);
+	content: '';
+	-webkit-transition: -webkit-transform 0.6s;
+	transition: transform 0.6s;
+	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+}
+.languages {
+	position: absolute;
+	right: 65px;
+	bottom: 65px;
+	margin: 3em;
+	padding: 0 1em;
+	max-width: 150px;
+	border-right: 4px solid #fff;
+	letter-spacing: 1px;
+	font-size: 20px;
+	text-align: right;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+}
+.portfolio:hover img {
+	opacity: 0.4;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+}
+.portfolio:hover figcaption:before {
+	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+}
+.portfolio:hover p {
+	opacity: 1;
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+.descript {
+	position: relative;
+	top: 100px;
+	width: 300px;
+	height: 300px;
+	color: #ccc;
+	font-size: 24px;
+	text-align: center;
+	display: inline;
+}
+.hire {
+	font-size: 18px;
+}
+/* footer */
+/* footer */
+.footer {
+	position: fixed;
+	width: 20%;
+	height: 40px;
+	left: 10px;
+	bottom: 0;
+}
+a:link, a:visited {
+	text-decoration: none;
+}
+.linkedin:before {
+	font-family: "FontAwesome";
+	content: '\f0e1';
+	font-size: 24px;
+	color: #fff;
+}
+.linkedin:hover:before {
+	color: #0177b5;
+}
+.github:before {
+	font-family: "FontAwesome";
+	content: '\f09b';
+	font-size: 24px;
+	color: #fff;
+	position: fixed;
+	left: 40px;
+}
+.github:hover:before {
+	color: #0177b5;
+}
+.email:before {
+	font-family: "FontAwesome";
+	content: '\f003';
+	font-size: 24px;
+	color: #fff;
+	position: fixed;
+	left: 70px;
+}
+.email:hover:before {
+	color: #0177b5;
+}
