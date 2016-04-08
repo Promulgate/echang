@@ -5,7 +5,7 @@
 		<script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" type="text/css">
-		<script type="text/javascript" src="lightbox.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<!-- Header -->
@@ -16,26 +16,43 @@
 		<section class="main">
 			<p class="about-btn">About Me</p>
 			<p class="works-btn">Works &amp; Projects</p>
+			<p class="resume-btn">R&eacute;sum&eacute;</p>
 		</section>
 		<!-- About -->
 		<section class="about">
 			<p class="close">X</p>
-			<div>
-
-			</div>
+			<section class="about-table">
+				<!-- Flip pic -->
+				<section class="about-left">
+					<div class="flip-container">
+					  <div class="flipper">
+					    <div class="front">
+					      <span class="front-title">Click Me</span>
+					    </div>
+					    <div class="back">
+					      <div class="back-title">Just Kidding</div>
+					    </div>
+					  </div>
+					</div>
+				</section>
+				<section class="about-right">
+					<p class="acontent">Hello! Born and raised in New York City, I am no stranger to deadlines. My professional passions lie in the expertise of fundamentals - CSS and JavaScript.</p>
+					<p class="acontent">Outside my professional life, I have a deep love for rock climbing, comedy shows, and sleight of hand. I speak English, Mandarin, Cantonese, play guitar, bass, drums, and am on my way to learning piano.</p>
+				</section>
+			</section>
 		</section>
 		<!-- Works -->
 		<section class="works">
 			<p class="close">X</p>
 			<div class="content">
 				<div class="grid">
-					<figure class="portfolio">
+					<a href="http://www.ericschang.com"><figure class="portfolio">
 						<img class="portfolio-img" src="images/Portfolio.jpg"/>
 						<figcaption class="caption">
 							<h2 class="h2">Portfolio</h2>
 							<p class="languages">HTML5/CSS3, jQuery</p>
 						</figcaption>	
-					</figure>
+					</figure></a>
 					<p class="descript">A profile of front-end developer, Eric Chang. Click on the image to visit!</p>
 				</div>
 			</div>
@@ -43,11 +60,75 @@
 				<p class="hire">Help me fill this section by hiring me! :)</p>
 			</section>
 		</section>
+		<!-- Resume -->
+		<section class="resume">
+			<p class="close">X</p>
+			<section class="page">
+				<header class="page-header">
+					<div class="phl">
+						<h3 class="phl-name">Eric Chang</h3>
+						<p class="phl-content">Front-End Developer | <a href="http://www.ericschang.com">ericschang.com</a></p>
+					</div>
+					<div class="phr">
+						<p class="phr-content">New York City, NY</p>
+						<p class="phr-content">(646)327-8423</p>
+						<p class="phr-content">szechichang@gmail.com</p>
+					</div>
+				</header>
+				<section class="content-left">
+					<section class="projects">
+						<h4 class="title">Projects</h4>
+						<h5 class="sub-title"><a href="http://www.ericschang.com">Eric S Chang</a> - <span class="italic">Portfolio</span></h5>
+						<p class="sub-content">A portfolio of font-end developer, Eric Chang</p>
+						<p class="sub-content">http://www.ericschang.com</p>
+					</section>
+					<section class="skills">
+						<h4 class="title">Skills</h4>
+						<h5 class="sub-title">Languages</h5>
+						<p class="sub-content">HTML5 / CSS3 (Semantic HTML, Cross Browser Coding)</p>
+						<p class="sub-content">JavaScript</p>
+						<h5 class="sub-title">Frameworks / APIs / Libraries</h5>
+						<p class="sub-content">jQuery (JavaScript)</p>
+						<h5 class="sub-title">Software / Technologies</h5>
+						<p class="sub-content">Git Version Control</p>
+						<p class="sub-content">All Windows Environment, Mac</p>
+						<p class="sub-content">Bash Shell</p>
+					</section>
+					<section class="profiles">
+						<h4 class="title">Profiles</h4>
+						<h5 class="sub-title"><a href="https://www.github/Promulgate">GitHub</a></h5>
+						<p class="sub-content">https://www.github/Promulgate</p>
+						<h5 class="sub-title"><a href="https://www.linkedin.com/in/Promulgate">LinkedIn</a></h5>
+						<p class="sub-content">https://www.linkedin.com/in/Promulgate</p>
+					</section>
+				</section>
+				<section class="content-right">
+					<section class="objective">
+						<h4 class="title">Objective</h4>
+						<p class="sub-content bump-right">To join a team passionate about light-weight platforms that emphasize good user experience</p>
+					</section>
+					<section class="related">
+						<h4 class="title">Related</h4>
+						<p class="sub-content bump-right">Chinese Mandarin and Cantonese</p>
+						<p class="sub-content bump-right">Microsoft Word, Excel, PowerPoint</p>
+						<p class="sub-content bump-right">Auxiliary Coast Guard Flotilla 12-01, District 014 - 2013 - 2015</p>
+					</section>
+					<section class="awards">
+						<h4 class="title">Awards</h4>
+						<p class="award">Chinese Language Study Program for Expatriate Youth</p>
+						<p class="sub-content">Overseas Compatriot Affairs Commision, Taiwan - August 2007</p>
+						<p class="award">Certification of Academic Excellence</p>
+						<p class="sub-content">CUNY, York College - December 2009</p>
+					</section>
+				</section>
+			</section>
+		</section>
 		<!-- Footer -->
 		<footer class="footer">
-      <a class="linkedin" href="https://www.linkedin.com/in/eric-chang-a59421116"></a>
+      <a class="linkedin" href="https://www.linkedin.com/in/Promulgate"></a>
       <a class="github" href="https://github.com/Promulgate"></a>
       <a class="email" href="mailto:szechichang@gmail.com"></a>
 		</footer>
+		<script type="text/javascript" src="lightbox.js"></script>
 	</body>
 </html>

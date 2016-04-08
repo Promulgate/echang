@@ -4,7 +4,7 @@
 }
 body{
 	font-family: 'Comfortaa', cursive;
-	color: #888;
+	cursor: default;
 	background-image: url("images/DSC_0187.jpg");
 	background-size: cover; 
 	background-repeat: no-repeat;
@@ -14,6 +14,14 @@ body{
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
   user-select: none;     
+}
+a:link, a:visited {
+	text-decoration: none;
+	color: #000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #2079c7;
 }
 /* header */
 /* header */
@@ -27,51 +35,36 @@ body{
 }
 /* Hero */
 /* Hero */
+.main {
+	color: #fff;
+	font-size: 3em;
+}
 .about-btn {
 	position: fixed;
 	top: 60%;
 	right: 15%;
-	color: #fff;
-	font-size: 3em;
-}
-.about-btn:hover {
-	text-shadow: 0 0 10px #00c6ff;
-	cursor: pointer;
 }
 .works-btn {
 	position: fixed;
 	top: 70%;
 	right: 15%;
-	color: #fff;
-	font-size: 3em;
 }
-.works-btn:hover {
+.resume-btn {
+	position: fixed;
+	top: 80%;
+	right: 15%;
+}
+.about-btn:hover, .works-btn:hover, .resume-btn:hover {
 	text-shadow: 0 0 10px #00c6ff;
 	cursor: pointer;
 }
-/* About */
-/* About */
-.about {
+.about, .works, .resume{
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, .75);
-	text-align: center;
-	z-index: 100;
-	display: none;
-}
-/* Works */
-/* Works */
-.works {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, .75);
-	text-align: center;
+	background-color: rgba(0, 0, 0, .8);
 	z-index: 100;
 	display: none;
 }
@@ -88,8 +81,118 @@ body{
 	text-shadow: 0 0 5px #00c6ff;
 	cursor: pointer;
 }
-/* Content */
-/* Content */
+/* About Content */
+/* About Content */
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+	border: 1px solid #ccc;
+}
+.flip-container:hover .flipper {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+.flip-container, .front, .back {
+	width: 320px;
+	height: 427px;
+}
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+  -o-transition: 0.6s;
+	-o-transform-style: preserve-3d;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.front {
+	background: url("images/Eric5.jpg") 0 0 no-repeat;
+	background-size: cover;
+	z-index: 2;
+}
+.back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	background: #dfdfdf;
+	background: url("images/Eric6.jpg") 0 0 no-repeat;
+	background-size: cover;
+}
+.front .front-title {
+	font-size: 2em;
+	display: inline-block;
+	background: rgba(33, 33, 33, 0.9);
+	color: #f8f8f8;
+	font-family: Courier;
+	padding: 5px 10px;
+	border-radius: 5px;
+	bottom: 30px;
+	left: 40%;
+	position: absolute;
+	text-shadow: 0.1em 0.1em 0.05em #333;
+	-webkit-transform: rotate(-20deg);
+	-moz-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+	transform: rotate(-20deg);
+}
+.back-title {
+	font-size: 2em;
+	display: inline-block;
+	background: rgba(33, 33, 33, 0.9);
+	color: #f8f8f8;
+	font-family: Courier;
+	padding: 5px 10px;
+	border-radius: 5px;
+	bottom: 60px;
+	left: 5%;
+	position: absolute;
+	text-shadow: 0.1em 0.1em 0.05em #333;
+	-webkit-transform: rotate(20deg);
+	-moz-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+	transform: rotate(20deg);
+}
+.about-table {
+	width: 100%;
+	display: table;
+	margin: auto;
+	table-layout: fixed;
+}
+.about-left {
+	width: 50%;
+	padding-left: 20%;
+	display: table-cell;
+}
+.about-right {
+	width: 50%;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+.acontent {
+	font-size: 1.5em;
+	color: #fff;
+	max-width: 600px;
+	background-color: rgba(0, 0, 0, .1);
+}
+/* Works Content */
+/* Works Content */
 .grid {
 	position: relative;
 	clear: both;
@@ -193,25 +296,108 @@ body{
 	top: 100px;
 	width: 300px;
 	height: 300px;
-	color: #ccc;
+	color: #fff;
 	font-size: 24px;
 	text-align: center;
 	display: inline;
 }
 .hire {
 	font-size: 18px;
+	color: #888;
 }
-/* footer */
-/* footer */
+/* Resume */
+/* Resume */
+.page {
+	position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+	width: 650px;
+	height: 800px;
+	background-color: #fff;
+	color: #000;
+	font-size: .8em;
+	margin: 0 auto;
+	font-family: "Merriweather", serif;
+}
+.page-header {
+	position: relative;
+	top: 0;
+	margin: 0;
+	height: 150px;
+}
+.phl {
+	margin: 40px 40px 0;
+	display: inline-block;
+}
+.phl-name {
+	margin: 0;
+	font-size: 3em;
+}
+.phl-content {
+	margin: 0;
+}
+.phr {
+	margin: 45px 20px 0;
+	float: right;
+}
+.phr-content {
+	margin: 0;
+}
+.content-left {
+	margin: 0;
+	width: 400px;
+	height: 650px;
+	display: inline-block;
+}
+.projects {
+	margin-left:20px;
+}
+.italic {
+	font-style: italic;
+	font-weight: normal;
+}
+.title {
+	color: #2079c7;
+	font-size: 1em;
+	text-transform: uppercase;
+	margin: 0 0 0 20px;
+}
+.sub-title {
+	font-size: 1em;
+	margin: 10px 0 0 20px;
+}
+.sub-content {
+	margin: 0 0 0 20px;
+}
+.skills, .profiles {
+	margin: 40px 0 0 20px;
+}
+.content-right {
+	width: 230px;
+	height: 650px;
+	margin-right: 20px;
+	float: right;
+	display: inline-block;
+}
+.related, .awards {
+	margin-top: 40px;
+}
+.bump-right {
+	margin-top: 10px;
+}
+.award {
+	margin-left: 20px;
+	margin-bottom: 0;
+	font-weight: bold;
+}
+/* Footer */
+/* Footer */
 .footer {
 	position: fixed;
 	width: 20%;
 	height: 40px;
 	left: 10px;
 	bottom: 0;
-}
-a:link, a:visited {
-	text-decoration: none;
 }
 .linkedin:before {
 	font-family: "FontAwesome";
@@ -220,7 +406,7 @@ a:link, a:visited {
 	color: #fff;
 }
 .linkedin:hover:before {
-	color: #0177b5;
+	color: #00c6ff;
 }
 .github:before {
 	font-family: "FontAwesome";
@@ -231,7 +417,7 @@ a:link, a:visited {
 	left: 40px;
 }
 .github:hover:before {
-	color: #0177b5;
+	color: #00c6ff;
 }
 .email:before {
 	font-family: "FontAwesome";
@@ -242,5 +428,5 @@ a:link, a:visited {
 	left: 70px;
 }
 .email:hover:before {
-	color: #0177b5;
+	color: #00c6ff;
 }
