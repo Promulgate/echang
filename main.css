@@ -3,7 +3,7 @@
 	src: url('font-awesome/fonts/fontawesome-webfont.woff');
 }
 body{
-	font-family: 'Comfortaa', cursive;
+	font-family: 'Merriweather', serif;
 	cursor: default;
 	background-image: url("images/DSC_0187.jpg");
 	background-size: cover; 
@@ -13,18 +13,22 @@ body{
 	-webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
-  user-select: none;     
+  user-select: none;   
 }
 a:link, a:visited {
 	text-decoration: none;
 	color: #000;
 }
+::-webkit-scrollbar {
+	width: 0px;
+	background: transparent;
+}  
 /* header */
 /* header */
 .logo {
 	margin-top: 2%;
 	text-align: center;
-	font-size: 4em;
+	font-size: 3.5em;
 	text-shadow: 1px 1px 1px #fff;
 	color: #fff;
 	cursor: default;
@@ -33,22 +37,15 @@ a:link, a:visited {
 /* Hero */
 .main {
 	color: #fff;
-	font-size: 3em;
-}
-.about-btn {
+	font-size: 2.5em;
+	width: 300px;
+	height: 300px;
 	position: fixed;
-	top: 60%;
-	right: 15%;
+	right: 10%;
+	bottom: 10%;
 }
-.works-btn {
-	position: fixed;
-	top: 70%;
-	right: 15%;
-}
-.resume-btn {
-	position: fixed;
-	top: 80%;
-	right: 15%;
+.about-btn, .works-btn, .resume-btn {
+	margin-top: 0;
 }
 .about-btn:hover, .works-btn:hover, .resume-btn:hover {
 	text-shadow: 0 0 10px #00c6ff;
@@ -72,16 +69,38 @@ a:link, a:visited {
 }
 .close {
 	color: #fff;
-	float: right;
+	position: absolute;
+	right: 50px;
 	margin-top: 5%;
 	margin-right: 5%;
 	font-size: 2.5em;
 	font-weight: bold;
 	text-shadow: 0 0 5px #00c6ff;
 	cursor: pointer;
+	z-index: 100;
 }
 /* About Content */
 /* About Content */
+.about-table {
+	width: 100%;
+	display: table;
+	margin: auto;
+	table-layout: fixed;
+	position: relative;
+	clear: both;
+	margin-top: 200px;
+}
+.about-left {
+	width: 50%;
+	padding-left: 20%;
+	display: table-cell;
+}
+.about-right {
+	width: 50%;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
 .flip-container {
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
@@ -167,23 +186,6 @@ a:link, a:visited {
   -o-transform: rotate(20deg);
 	transform: rotate(20deg);
 }
-.about-table {
-	width: 100%;
-	display: table;
-	margin: auto;
-	table-layout: fixed;
-}
-.about-left {
-	width: 50%;
-	padding-left: 20%;
-	display: table-cell;
-}
-.about-right {
-	width: 50%;
-	text-align: center;
-	display: table-cell;
-	vertical-align: middle;
-}
 .acontent {
 	font-size: 1.5em;
 	color: #fff;
@@ -192,6 +194,10 @@ a:link, a:visited {
 }
 /* Works Content */
 /* Works Content */
+.works {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
 .grid {
 	position: relative;
 	clear: both;
@@ -203,6 +209,7 @@ a:link, a:visited {
 }
 .portfolio {
 	position: relative;
+	top: 150px;
 	float: left;
 	overflow: hidden;
 	border: 2px solid #ccc;
@@ -291,16 +298,16 @@ a:link, a:visited {
 	transition-delay: 0.1s;
 }
 .descript {
-	position: relative;
-	top: 100px;
-	width: 300px;
-	height: 300px;
+	margin-top: 200px;
+	width: 500px;
+	height: 100px;
 	color: #fff;
 	font-size: 24px;
 	text-align: center;
-	display: inline;
+	display: inline-block;
 }
 .hire {
+	margin-top: 200px;
 	font-size: 18px;
 	color: #888;
 }
@@ -316,35 +323,36 @@ a:link, a:visited {
 	color: #000;
 	font-size: .8em;
 	margin: 0 auto;
-	font-family: "Merriweather", serif;
 }
 .page a:hover {
 	text-decoration: underline;
 	color: #2079c7;
 }
-.page-header {
-	position: relative;
-	top: 0;
+.head-left {
 	margin: 0;
+	width: 400px;
 	height: 150px;
-}
-.phl {
-	margin: 40px 40px 0;
 	display: inline-block;
 }
-.phl-name {
-	margin: 0;
+.head-left-name {
+	margin: 40px 0 0 40px;
 	font-size: 3em;
 }
-.phl-content {
-	margin: 0;
+.head-left-content {
+	margin-left: 40px;
 }
-.phr {
-	margin: 45px 20px 0;
+.head-right {
+	position: fixed;
+	width: 230px;
+	height: 110px;
+	margin-left: 20px;
+	margin-top: 40px;
 	float: right;
+	display: inline-block;
 }
-.phr-content {
+.head-right-content {
 	margin: 0;
+	text-align: left;
 }
 .content-left {
 	margin: 0;
@@ -398,6 +406,7 @@ a:link, a:visited {
 	font-size: 1em;
 	position: fixed;
 	bottom: 0;
+	left: 10px;
 }
 .docx:after {
 	font-family: "FontAwesome";
@@ -444,4 +453,13 @@ a:link, a:visited {
 }
 .email:hover:before {
 	color: #00c6ff;
+}
+@media (max-height: 700px) {
+	.resume {
+		overflow: scroll;
+	}	
+	.page {
+		top: 0;
+		transform: translateY(0);
+	}
 }
