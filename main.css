@@ -1,6 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
 @font-face {
 	font-family: FontAwesome;
 	src: url('font-awesome/fonts/fontawesome-webfont.woff');
+}
+html,
+body {
+	width: 100%;
+	height: 100%;
 }
 body{
 	font-family: 'Merriweather', serif;
@@ -11,9 +37,9 @@ body{
 	background-attachment: fixed;
 	overflow: hidden;
 	-webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
-  user-select: none;   
+  	-moz-user-select: none;     /* Firefox all */
+ 	-ms-user-select: none;      /* IE 10+ */
+  	user-select: none;   
 }
 a:link, a:visited {
 	text-decoration: none;
@@ -21,10 +47,12 @@ a:link, a:visited {
 }
 ::-webkit-scrollbar {
 	width: 0px;
+	height: 0px;
 	background: transparent;
 }  
 /* header */
 /* header */
+
 .logo {
 	margin-top: 2%;
 	text-align: center;
@@ -38,14 +66,17 @@ a:link, a:visited {
 .main {
 	color: #fff;
 	font-size: 2.5em;
-	width: 300px;
-	height: 300px;
-	position: fixed;
-	right: 10%;
-	bottom: 10%;
+}
+.menu {
+	position: absolute;
+	bottom: 100px;
+	right: 100px;
+	list-style: none;
 }
 .about-btn, .works-btn, .resume-btn {
-	margin-top: 0;
+	margin-right: 100px;
+	margin-top: 50px;
+	display: block;
 }
 .about-btn:hover, .works-btn:hover, .resume-btn:hover {
 	text-shadow: 0 0 10px #00c6ff;
@@ -69,10 +100,9 @@ a:link, a:visited {
 }
 .close {
 	color: #fff;
-	position: absolute;
+	position: fixed;
+	top: 50px;
 	right: 50px;
-	margin-top: 5%;
-	margin-right: 5%;
 	font-size: 2.5em;
 	font-weight: bold;
 	text-shadow: 0 0 5px #00c6ff;
@@ -152,7 +182,7 @@ a:link, a:visited {
 	background: url("images/Eric6.jpg") 0 0 no-repeat;
 	background-size: cover;
 }
-.front .front-title {
+.front-title {
 	font-size: 2em;
 	display: inline-block;
 	background: rgba(33, 33, 33, 0.9);
@@ -195,8 +225,7 @@ a:link, a:visited {
 /* Works Content */
 /* Works Content */
 .works {
-	overflow-x: hidden;
-	overflow-y: scroll;
+	overflow: scroll;
 }
 .grid {
 	position: relative;
@@ -315,14 +344,15 @@ a:link, a:visited {
 /* Resume */
 .page {
 	position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  	top: 50%;
+ 	transform: translateY(-50%);
 	width: 650px;
 	height: 800px;
 	background-color: #fff;
 	color: #000;
 	font-size: .8em;
 	margin: 0 auto;
+	overflow: scroll;
 }
 .page a:hover {
 	text-decoration: underline;
@@ -454,12 +484,117 @@ a:link, a:visited {
 .email:hover:before {
 	color: #00c6ff;
 }
-@media (max-height: 700px) {
+@media all and (max-height: 750px) {
 	.resume {
-		overflow: scroll;
+		overflow-x: scroll;
+		overflow-y: scroll;
 	}	
 	.page {
 		top: 0;
 		transform: translateY(0);
+	}
+}
+@media all and (max-width: 1280px) {
+	.about-left {
+		padding-left: 10%;
+	}
+	.main {
+		font-size: 1.5em;
+		right: 50px;
+		bottom: 50px;
+	}
+	.about-btn, .works-btn, .resume-btn {
+		margin: 25px 0 0 25px;
+	}
+	.about-right {
+		padding-right: 5%;
+	}
+	.close {
+		font-size: 1.5em;
+	}
+@media all and (max-width: 1024px) {
+	.logo {
+		font-size: 2.5em;
+	}
+	.main {
+		font-size: 1em;
+	}
+	.flip-container, .front, .back {
+		width: 220px;
+		height: 327px;
+	}
+	.front-title {
+		font-size: 1em;
+		left: 50%;
+	}
+	.back-title {
+		font-size: 1em;
+		bottom: 30px;
+	}
+	.acontent {
+		font-size: .8em;
+	}
+}
+@media all and (max-width: 960px) {
+	.portfolio {
+		float: none;
+		margin: 0 auto;
+	}
+}
+@media all and (max-width: 500px) {
+	.logo {
+		margin-top: 4%;
+		font-size: 1.75em;
+	}
+	.close {
+		font-size: 1em;
+		top: 25px;
+		right: 25px;
+	}
+	.menu {
+		right: 75px;
+	}
+	.about-btn, .works-btn, .resume-btn {
+		margin: 10px 0 0 0;
+	}
+	.about {
+		overflow: scroll;	
+	}
+	.about-table {
+		margin-top: 50px;
+	}
+	.about-left {
+		padding: 0 0 0 5%;
+		display: block;
+	}
+	.about-right {
+		width: 200px;
+		float: right;
+		display: block;
+	}
+	.descript {
+		width: 70%;
+		height: 100px;
+		margin-left: 15%;
+		font-size: .8em;
+		text-align: center;
+		display: block;
+	}
+	.portfolio {
+		width: 250px;
+		height: 150px;
+	}
+	.caption {
+		padding: 5px;
+		font-size: .8em;
+	}
+	.languages {
+		right: 5px;
+		bottom: 5px;
+		font-size: .8em;
+	}
+	.hire {
+		margin: 0;
+		font-size: .8em;
 	}
 }
