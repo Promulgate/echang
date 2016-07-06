@@ -9,8 +9,8 @@ $(document).ready(function() {
 		$('.resume').addClass('show');
 	})
 	$('.close').click(function() {
-		$('.works').removeClass('show');
 		$('.about').removeClass('show');
+		$('.works').removeClass('show');
 		$('.resume').removeClass('show');
 	});
 });

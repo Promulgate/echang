@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Eric Chang</title>
-		<script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
+		<meta name="viewport" content="width=device-width">
+		<title>Eric Chang | Front-End Developer</title>
 		<link rel="stylesheet" type="text/css" href="main.css">
-		<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" type="text/css">
-		<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+		<script src="jquery-1.6.2.min.js"></script>
 	</head>
 	<body>
 		<!-- Header -->
@@ -14,9 +13,11 @@
 		</header>
 		<!-- Hero -->
 		<section class="main">
-			<p class="about-btn">About Me</p>
-			<p class="works-btn">Works &amp; Projects</p>
-			<p class="resume-btn">R&eacute;sum&eacute;</p>
+			<ul class="menu">
+				<li><span class="about-btn">About</span></li>
+				<li><span class="works-btn">Projects</span></li>
+				<li><span class="resume-btn">R&eacute;sum&eacute;</span></li>
+			</ul>
 		</section>
 		<!-- About -->
 		<section class="about">
@@ -46,8 +47,9 @@
 			<p class="close">X</p>
 			<div class="content">
 				<div class="grid">
-					<a href="http://www.ericschang.com"><figure class="portfolio">
+					<figure class="portfolio">
 						<img class="portfolio-img" src="images/Portfolio.jpg"/>
+						<a href="http://www.ericschang.com">
 						<figcaption class="caption">
 							<h2 class="h2">Portfolio</h2>
 							<p class="languages">HTML5/CSS3, jQuery</p>
@@ -64,17 +66,15 @@
 		<section class="resume">
 			<p class="close">X</p>
 			<section class="page">
-				<header class="page-header">
-					<div class="phl">
-						<h3 class="phl-name">Eric Chang</h3>
-						<p class="phl-content">Front-End Developer | <a href="http://www.ericschang.com">ericschang.com</a></p>
-					</div>
-					<div class="phr">
-						<p class="phr-content">New York City, NY</p>
-						<p class="phr-content">(646)327-8423</p>
-						<p class="phr-content">szechichang@gmail.com</p>
-					</div>
-				</header>
+				<section class="head-left">
+					<h3 class="head-left-name">Eric Chang</h3>
+					<p class="head-left-content">Front-End Developer | <a href="http://www.ericschang.com">ericschang.com</a></p>
+				</section>
+				<section class="head-right">
+					<p class="head-right-content">New York City, NY</p>
+					<p class="head-right-content">(646)327-8423</p>
+					<p class="head-right-content">szechichang@gmail.com</p>
+				</section>
 				<section class="content-left">
 					<section class="projects">
 						<h4 class="title">Projects</h4>
