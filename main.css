@@ -123,6 +123,9 @@ a:link, a:visited {
 }
 /* About Content */
 /* About Content */
+.about {
+	overflow: scroll;
+}
 .about-table {
 	width: 100%;
 	display: table;
@@ -142,6 +145,7 @@ a:link, a:visited {
 	text-align: center;
 	display: table-cell;
 	vertical-align: middle;
+	padding-bottom: 20px;
 }
 .flip-container {
   -webkit-perspective: 1000;
@@ -552,6 +556,10 @@ a:link, a:visited {
 		top: 0;
 		transform: translateY(0);
 	}
+	.menu {
+		margin-right: 0;
+		bottom: 80px;
+	}
 }
 @media all and (max-width: 560px) {
 	.about {
@@ -564,9 +572,6 @@ a:link, a:visited {
 		display: block;
 		margin: 0 auto;
 		margin-top: 20px;
-	}
-	.menu {
-		margin-right: 0;
 	}
 }
 @media all and (max-width: 500px) {
