@@ -39,7 +39,8 @@ body{
 	-webkit-user-select: none;  /* Chrome all / Safari all */
   	-moz-user-select: none;     /* Firefox all */
  	-ms-user-select: none;      /* IE 10+ */
-  	user-select: none;   
+  	user-select: none;
+  	min-width: 320px;
 }
 a:link, a:visited {
 	text-decoration: none;
@@ -71,16 +72,27 @@ a:link, a:visited {
 	position: absolute;
 	bottom: 100px;
 	right: 100px;
+	margin-right: 100px;
+	padding: 5px;
 	list-style: none;
 }
-.about-btn, .works-btn, .resume-btn {
-	margin-right: 100px;
-	margin-top: 50px;
+.works-btn, .resume-btn {
+	margin-top: 45px;
 	display: block;
+}
+.about-btn:before, .works-btn:before, .resume-btn:before {
+	font-family: "FontAwesome";
+	content: '\f105';
+	font-size: .9em;
+	color: #fff;
+	padding-right: 5px;
 }
 .about-btn:hover, .works-btn:hover, .resume-btn:hover {
 	text-shadow: 0 0 10px #00c6ff;
 	cursor: pointer;
+}
+.about-btn:hover:before, .works-btn:hover:before, .resume-btn:hover:before {
+	content: '\f101';
 }
 .about, .works, .resume{
 	position: fixed;
@@ -111,6 +123,9 @@ a:link, a:visited {
 }
 /* About Content */
 /* About Content */
+.about {
+	overflow: scroll;
+}
 .about-table {
 	width: 100%;
 	display: table;
@@ -130,6 +145,7 @@ a:link, a:visited {
 	text-align: center;
 	display: table-cell;
 	vertical-align: middle;
+	padding-bottom: 20px;
 }
 .flip-container {
   -webkit-perspective: 1000;
@@ -484,16 +500,6 @@ a:link, a:visited {
 .email:hover:before {
 	color: #00c6ff;
 }
-@media all and (max-height: 750px) {
-	.resume {
-		overflow-x: scroll;
-		overflow-y: scroll;
-	}	
-	.page {
-		top: 0;
-		transform: translateY(0);
-	}
-}
 @media all and (max-width: 1280px) {
 	.about-left {
 		padding-left: 10%;
@@ -541,6 +547,33 @@ a:link, a:visited {
 		margin: 0 auto;
 	}
 }
+@media all and (max-height: 750px) {
+	.resume {
+		overflow-x: scroll;
+		overflow-y: scroll;
+	}	
+	.page {
+		top: 0;
+		transform: translateY(0);
+	}
+	.menu {
+		margin-right: 0;
+		bottom: 80px;
+	}
+}
+@media all and (max-width: 560px) {
+	.about {
+		overflow: scroll;
+	}
+	.about-table {
+		margin-top: 50px;
+	}
+	.about-table, .about-left, .about-right {
+		display: block;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+}
 @media all and (max-width: 500px) {
 	.logo {
 		margin-top: 4%;
@@ -553,24 +586,6 @@ a:link, a:visited {
 	}
 	.menu {
 		right: 75px;
-	}
-	.about-btn, .works-btn, .resume-btn {
-		margin: 10px 0 0 0;
-	}
-	.about {
-		overflow: scroll;	
-	}
-	.about-table {
-		margin-top: 50px;
-	}
-	.about-left {
-		padding: 0 0 0 5%;
-		display: block;
-	}
-	.about-right {
-		width: 200px;
-		float: right;
-		display: block;
 	}
 	.descript {
 		width: 70%;
