@@ -43,7 +43,6 @@ body{
   	min-width: 320px;
 }
 a:link, a:visited {
-	text-decoration: none;
 	color: #000;
 }
 ::-webkit-scrollbar {
